@@ -284,6 +284,16 @@ public class DialpadView extends LinearLayout {
         mCanDigitsBeEdited = canBeEdited;
     }
 
+    public void setCallRateInformation(String countryName, String displayRate) {
+        if (TextUtils.isEmpty(countryName) && TextUtils.isEmpty(displayRate)) {
+            mRateContainer.setVisibility(View.GONE);
+            return;
+        }
+        mRateContainer.setVisibility(View.VISIBLE);
+        mIldCountry.setText(countryName);
+        mIldRate.setText(displayRate);
+    }
+
     public boolean canDigitsBeEdited() {
         return mCanDigitsBeEdited;
     }
