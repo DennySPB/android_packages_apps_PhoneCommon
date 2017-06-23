@@ -28,49 +28,35 @@
     <LinearLayout
         android:id="@+id/rate_container"
         android:layout_width="match_parent"
-        android:background="@color/credit_banner_background"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:visibility="gone">
 
-        <com.android.phone.common.widget.ResizingILDContainerLayout
+        <LinearLayout
             android:id="@+id/ild_container"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/ild_margin_height"
-            android:layout_marginBottom="@dimen/ild_margin_height"
-            android:layoutDirection="locale" >
+            android:layout_marginBottom="@dimen/ild_margin_height">
 
-            <TextView
-                android:id="@+id/ild_country"
+            <TextView android:id="@+id/ild_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView android:id="@+id/ild_rate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dialpad_credits_padding"
-                android:textColor="@color/credit_banner_text"
-                android:textAlignment="viewStart"
-                android:singleLine="true"
-                android:ellipsize="end" />
+                android:layout_marginStart="4dp"
+                android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/ild_rate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dialpad_credits_spacing"
-                android:layout_marginEnd="@dimen/dialpad_credits_padding"
-                android:textStyle="bold"
-                android:textColor="@color/credit_banner_text"
-                android:textAlignment="viewEnd"
-                android:singleLine="true"
-                android:ellipsize="end" />
-
-        </com.android.phone.common.widget.ResizingILDContainerLayout>
+        </LinearLayout>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/dialpad_separator_line_color" />
+            android:background="@color/dialpad_separator_color" />
 
     </LinearLayout>
 
@@ -191,7 +177,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/dialpad_separator_line_color" />
+        android:background="@color/dialpad_separator_color" />
 
     <Space
         android:layout_width="match_parent"
